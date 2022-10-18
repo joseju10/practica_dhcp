@@ -1,0 +1,17 @@
+#WEB
+
+bd_name: wordpress_bd
+bd_user: wordpress_user
+bd_pass: asdasd
+
+#DHCP
+
+red1_network: 10.0.0.0
+red1_mask: 255.255.255.0
+red1_range_start: 10.0.0.100
+red1_range_end: 10.0.0.150
+red1_gateway: 10.0.0.1
+red1_default_time: 3600
+red1_max_time: 7200
+mac_servidor: 52:54:00:1f:04:75
+ip_reserva: 10.0.0.210

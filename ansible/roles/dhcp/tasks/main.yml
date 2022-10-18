@@ -1,0 +1,15 @@
+- name: Instalando isc-dhcp-server...
+  apt:
+    name: isc-dhcp-server
+
+- name: Configurando isc-dhcp-server...
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  with_items:
+     - { src: isc-dhcp-server, dest: /etc/default/isc-dhcp-server }
+     - { src: dhcpd.conf, dest: /etc/dhcp/dhcpd.conf }
+  notify: restart dhcp-server

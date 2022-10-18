@@ -1,0 +1,4 @@
+<network>
+  <name>muy-aislada-dhcp</name>
+  <bridge name='virbr3'/>
+</network>
